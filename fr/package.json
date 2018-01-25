@@ -1,0 +1,17 @@
+{
+  "name": "tk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "gulp sass",
+    #...
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    #...
+  }
+}
+

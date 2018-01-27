@@ -16,6 +16,17 @@ https://www.npmjs.com/package/gulp-if
 https://www.npmjs.com/package/csswring
 https://www.npmjs.com/package/css-mqpacker
 
+---
 
+- tasks
+- config.js
+
+---
+/fr/.
+- gulpfile.js
+- package.json
+- gulp
+  - tasks
+  - config.js
 
 

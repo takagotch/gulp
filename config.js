@@ -4,5 +4,5 @@ module.exports = {
   scss: ',/assets/sprite',
   styleguide: './assets/styleguide',
   ejs: './assets/ejs'
-}
+};
 

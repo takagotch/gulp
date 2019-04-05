@@ -4,13 +4,151 @@
 https://gulpjs.com/
 
 ```js
+function defaultTask(cd) {
+  cb();
+}
 
+exports.default = defaultTask
 ```
 
-```
+```sh
+node --version
+node --version
+npm --version
+npm --version
+npx --version
+npx --version
+npm install --global gulp-cli
+npx mkdirp my-project
+cd myproject
+npm init
+npm install --save-dev gulp
+gulp --version
+gulp
 ```
 
-```
+```js
+const { series } = require('gulp');
+
+function clean(cb) {
+  cb();
+}
+
+exports.build = build;
+exports.default = series(clean, build);
+
+const { series } = require('gulp');
+
+function transpile(cb) {
+  cb();
+}
+
+function bundle(cb) {
+  cb();
+}
+
+exports.build = series(transpile, bundle);
+
+
+const { parallel } = require('gulp');
+
+function javascript(cb) {
+  cb();
+}
+
+function css(cb) {
+  cb();
+}
+
+exports.build = parallel(javascript, css);
+
+const { series } = require('gulp');
+
+function minify(cb) {
+  cb();
+}
+
+function transpile(cb) {
+  cb();
+}
+
+if(process.env.NODE_ENV === 'production') {
+  exports.build = series(transpile, minify);
+} else {
+  exports.build = series(transpile, livereload);
+}
+
+const { series, parallel } = require('gulp');
+
+function clean(cb) {
+  cb();
+}
+
+function cssTranspile(cb) {
+  cb();
+}
+
+function cssMinify(cb) {
+  cb();
+}
+
+funciton jsTranspile(cb) {
+  cb();
+}
+
+function jsBundle(cb) {
+  cb();
+}
+
+function jsMinify(cb) {
+  cb();
+}
+
+function public(cb) {
+  cb();
+}
+
+exports.build = series(
+  clean,
+  parallel(
+    cssTranspile,
+    series(jsTranspile, jsBundle)
+  ),
+  parallel(cssMinify, jsMinify),
+  publish
+);
+
+const { series, parallel } = require('gulp');
+
+const clean = function(cb) {
+  cb();
+};
+
+const css = series(clean, function(cb) {
+  cb();
+});
+
+const javascript = series(clean, function(cb) {
+  cb();
+});
+
+exports.build = parallel(css, javascript);
+
+const { series, parallel } = require('gulp');
+
+function clean(cb) {
+  cb();
+}
+
+function css(cb) {
+  cb();
+}
+
+function javascript(cb) {
+  cb();
+}
+
+exports.build = series(clean, parallel(css, javascript));
 ```
 
 
@@ -99,12 +237,9 @@ npm run build:prod
 ```
 
 
+```js
+// https://gulpjs.com/docs/en/getting-started/async-completion
 
 
-
-
-
-
-
-
+```
 
